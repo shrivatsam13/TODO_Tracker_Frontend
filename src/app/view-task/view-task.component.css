@@ -1,0 +1,107 @@
+/* .body {
+    margin-top: 4%;
+    min-height: 85vh;
+    display: flex;
+    justify-content: center;
+} */
+
+/* .card-container {
+    margin: 0px 120px;
+} */
+
+mat-card {
+    width: 450px;
+    display: inline-block;
+    margin: 23px;
+    border-radius: 15px;
+    height: max-content;
+    min-height: 250px;
+    box-shadow: 1px 1px 6px #2080b7;
+}
+
+mat-card-title {
+    text-align: center;
+    margin: 8px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.content {
+    font-size: 22px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: black;
+    margin-top: 18px;
+}
+
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.priority {
+    display: flex;
+    border-radius: 15px;
+    width: fit-content;
+    padding: 2px 5px;
+    align-items: center;
+    margin-top: 5px ;
+    margin-left: 5px ;
+}
+
+mat-icon{
+    font-size: 15px;
+}
+
+a{
+    text-decoration: none;
+    color: grey;
+}
+
+.fab-button {
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+}
+
+.mat:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+
+.card-icon {
+    width: 100%; /* Take up the full width of the card */
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+}
+
+.hover-icons {
+    display: flex;
+    justify-content: space-between;
+}
+
+mat-icon{
+    font-size: 25px;
+}
+
+.hover-icons button {
+    margin-right: 8px;
+    margin-left: 8px;
+}
+
+.date-section {
+    display: flex;
+    justify-content:space-evenly;
+    margin-top: 50px;
+}
+
+.date-label {
+    flex: 1; /* Take up equal space within the date section */
+    text-align: left; /* Align the created date to the left */
+}
+
+.date-label:last-child {
+    text-align: right; /* Align the due date to the right */
+}
+

@@ -1,0 +1,29 @@
+<!-- src/app/login/login.component.html -->
+<app-header></app-header>
+<div class="intro">
+  <h1>Welcome to the ToDo Tracker app. It's your personal productivity companion. Streamline your tasks, stay organized, and achieve your goals with ease.</h1>
+</div>
+<div class="main-container">
+  <div class="background-img">
+    <img src="../../assets/1.jpg" alt="">
+  </div>
+
+  <div class="login-container">
+    <h2>Login with credentials to view your To-Do's</h2>
+    <form>
+      <mat-form-field>
+        <input matInput placeholder="Email" [(ngModel)]="user.userEmail" name="email" required />
+      </mat-form-field>
+  
+      <mat-form-field>
+        <input matInput type="password" placeholder="Password" [(ngModel)]="user.userPassword" name="password" required />
+      </mat-form-field>
+  
+      <button mat-raised-button color="primary" (click)="login()">Submit</button>
+    </form>
+    <h3>If you are not an existing user, <a routerLink="/register">click here</a> to register</h3>
+
+  </div>
+  
+
+</div>

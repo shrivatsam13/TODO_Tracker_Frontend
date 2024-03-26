@@ -1,0 +1,56 @@
+/* src/app/login/login.component.css */
+.main-container {
+  display: flex;
+  height: 100vh; /* Set the height to 100% of the viewport height */
+  justify-content: center; 
+  align-items: flex-start;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.background-img {
+  flex: 1; /* Take up the available space in the flex container */
+  max-width: 600px; /* Set a maximum width for the image container */
+  margin-right: 80px;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px; /* Adjust the width as needed */
+  margin-left: 80px;
+}
+
+h1{
+  text-align: center;
+  padding-left: 180px;
+  padding-right: 180px;
+  margin-bottom: 90px;
+  margin-top: 50px;
+  font-weight: 500;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; /* Take up the full width of the login container */
+  max-width: 500px;
+}
+
+mat-form-field {
+  width: 70%;
+  margin-bottom: 10px;
+}
+
+button {
+  width: 100%;
+  max-width: 120px; /* Adjust the max-width as needed */
+  margin-top: 10px; /* Add margin to the top for spacing */
+}
+
+h3 {
+  margin-top: 20px; /* Add margin to the top for spacing */
+}

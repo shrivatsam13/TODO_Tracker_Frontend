@@ -1,0 +1,44 @@
+<mat-card *ngFor="let task of taskList" class="mat">
+    <div class="card-header">
+        <div class="priority" [style.background-color]="getPriorityBackgroundColor(task.taskPriority)">
+            <mat-card-subtitle style="color: rgb(15, 24, 31); font-size: 13px;">
+                {{task.taskPriority}}
+            </mat-card-subtitle>
+        </div>
+    </div>
+    <mat-card-content>
+        <mat-card-title>{{task.taskTitle}}</mat-card-title>
+        <mat-card-subtitle class="content">{{task.taskContent}}</mat-card-subtitle>
+        
+        <div class="date-section">
+            <div class="date-label">
+                <mat-card-subtitle class="date">Created:{{task.taskCreatedDate}}</mat-card-subtitle>
+            </div>
+            <div class="date-label">
+                <mat-card-subtitle class="date">Due:{{task.taskDueDate}}</mat-card-subtitle>
+            </div>
+        </div>
+
+    </mat-card-content>
+
+    <!-- <mat-card-actions class="card-icon">
+        <div class="hover-icons">
+            <button mat-icon-button aria-label="Display">
+                <mat-icon color="primary">visibility</mat-icon>
+            </button>
+            <a>
+                <button mat-icon-button aria-label="Delete">
+                    <mat-icon color="warn">delete</mat-icon>
+                </button>
+            </a>
+            <a>
+                <button mat-icon-button aria-label="Edit">
+                    <mat-icon color="primary">edit</mat-icon>
+                </button>
+            </a>
+            <button mat-icon-button aria-label="Archive">
+                <mat-icon color="accent">archive</mat-icon>
+            </button>
+        </div>
+    </mat-card-actions> -->
+</mat-card>

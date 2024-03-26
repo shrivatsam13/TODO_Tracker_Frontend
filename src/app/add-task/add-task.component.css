@@ -1,0 +1,34 @@
+/* add-note.component.css */
+
+.add-task-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: max-content /* Adjust as needed for your layout */
+  }
+  
+  mat-card {
+    width: 600px; /* Adjust the width as needed */
+  }
+  
+  mat-card-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  mat-form-field {
+    margin-bottom: 16px; /* Adjust the spacing between form fields */
+    width: 100%;
+  }
+  
+  mat-datepicker {
+    width: 100%; /* Make the datepicker full-width within the form field */
+  }
+  
+  mat-card-actions {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    margin-top: 16px; /* Adjust the spacing between the form fields and actions */
+  }
+  

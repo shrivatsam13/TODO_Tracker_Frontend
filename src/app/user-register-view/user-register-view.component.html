@@ -1,0 +1,37 @@
+<app-header></app-header>
+
+<div class="main-container">
+
+  <div class="image-container">
+    <img src="../../assets/feature-pic-todo-list-blog.png" alt="">
+  </div>
+
+  <div class="form-container">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title class="centered-title">Register User Details</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+          <mat-form-field class="form-group">
+            <mat-label>Username</mat-label>
+            <input matInput id="username" name="username" [(ngModel)]="user.userName" required>
+          </mat-form-field>
+
+          <mat-form-field class="form-group">
+            <mat-label>Email</mat-label>
+            <input matInput type="email" id="email" name="email" [(ngModel)]="user.userEmail" required>
+          </mat-form-field>
+
+          <mat-form-field class="form-group">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" id="password" name="password" [(ngModel)]="user.userPassword" required>
+          </mat-form-field>
+
+          <button mat-raised-button color="primary" type="submit">Submit</button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+  

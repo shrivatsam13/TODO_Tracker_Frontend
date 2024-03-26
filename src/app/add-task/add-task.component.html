@@ -1,0 +1,43 @@
+<!-- add-note.component.html -->
+
+<div class="add-task-container">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>{{title}}</mat-card-title>
+      </mat-card-header>
+  
+      <mat-card-content>
+        <!-- Add your form fields for adding a new task -->
+        <mat-form-field>
+          <input matInput placeholder="Task Title" [(ngModel)]="newTaskTitle">
+        </mat-form-field>
+  
+        <mat-form-field>
+          <textarea matInput placeholder="Task Content" [(ngModel)]="newTaskContent"></textarea>
+        </mat-form-field>
+  
+        <mat-form-field>
+          <mat-label>Priority</mat-label>
+          <mat-select [(ngModel)]="newTaskPriority">
+            <mat-option value="High">High</mat-option>
+            <mat-option value="Medium">Medium</mat-option>
+            <mat-option value="Low">Low</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput [matDatepicker]="picker" placeholder="Reminder Date and Time" [(ngModel)]="newTaskReminderDateTime" [matDatepickerFilter]="filterPreviousDates">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+  
+        <!-- Add other form fields as needed -->
+      </mat-card-content>
+  
+      <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="onAddTask()">{{buttonTitle}}</button>
+        <button mat-button (click)="onCancel()">Cancel</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  

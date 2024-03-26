@@ -1,0 +1,26 @@
+<div id="header">
+  <div class="logo">
+    <img src="assets/logo.png" alt="To-Do-Planner Logo" />
+    <a class="title" routerLink="">To-Do-Tracker</a>
+  </div>
+  <div class="icons">
+    <a *ngIf="isLoggedIn && !isRegisterPage()" matTooltip="{{ showArchived ? 'Archives' : 'Tasks' }}" [routerLink]="showArchived ? '/archived' : '/taskList'" (click)="stateService.toggleArchive(); taskService.reset(); allowNavigation = true;">
+      <mat-icon>{{ showArchived ? 'archive' : 'list' }}</mat-icon>
+    </a>    
+   
+    <a *ngIf="isLoggedIn && !isRegisterPage()" matTooltip="Log Out" style="margin-left: 10px;" (click)="logout()" routerLink="/login" (click)="allowNavigation = true;">
+      <mat-icon>logout</mat-icon>
+    </a>
+  
+    <a *ngIf="!isLoggedIn && !isRegisterPage()" matTooltip="Register" style="margin-left: 10px;" routerLink="/register" (click)="allowNavigation = true;">
+      <mat-icon>person_add</mat-icon>
+    </a>
+  
+    <a *ngIf="!isLoggedIn && isRegisterPage()" matTooltip="Login" style="margin-left: 10px;" routerLink="/login" (click)="allowNavigation = true;">
+      <mat-icon>login</mat-icon>
+    </a>
+  </div>
+  
+  
+</div>
+  

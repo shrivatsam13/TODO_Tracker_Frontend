@@ -1,0 +1,23 @@
+<div class="search-container">
+  <div class="searchdiv">
+    <input class="searchbar" type="text" placeholder="Enter to search tasks" [(ngModel)]="searchQuery" />
+    <button (click)="search()">Search</button>
+  </div>
+
+  <div class="filter-options">
+    <input type="radio" name="priority" value="all" checked [(ngModel)]="selectedPriority" (change)="onPriorityChange('all')" />
+    <label>All</label>
+
+    <input type="radio" name="priority" value="low" [(ngModel)]="selectedPriority" (change)="onPriorityChange('low')" />
+    <label>Low</label>
+
+    <input type="radio" name="priority" value="medium" [(ngModel)]="selectedPriority" (change)="onPriorityChange('medium')" />
+    <label>Medium</label>
+
+    <input type="radio" name="priority" value="high" [(ngModel)]="selectedPriority" (change)="onPriorityChange('high')" />
+    <label>High</label>
+
+    <input type="radio" name="completed" value="completed" [(ngModel)]="selectedPriority" (change)="onPriorityChange('completed')" *ngIf = "showCompleted"/>
+    <label for="completed" *ngIf = "showCompleted">Completed</label>
+  </div>
+</div>
