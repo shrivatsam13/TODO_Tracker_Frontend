@@ -27,6 +27,7 @@ export class HeaderComponent {
   }
 
   logout() {
+    this.showArchived = true
     this.authService.logout();
   }
 

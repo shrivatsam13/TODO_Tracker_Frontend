@@ -28,6 +28,20 @@ export class ArchivedTaskListComponent implements OnInit {
     this.getTaskList();
   }
 
+  showButton(task: Task): boolean {
+    console.log("Entered to check for button");
+    const currentDate = new Date();
+    // Get the due date of the task
+
+    const dueDateParts = task.taskDueDate.split('/');
+    const dueDate = new Date(Number(dueDateParts[2]), Number(dueDateParts[1]) - 1, Number(dueDateParts[0]));
+    console.log("Due Date: " + dueDate);
+    console.log("Current Date: " + currentDate);
+    // Check if the due date is before the current date
+    console.log(dueDate < currentDate);
+    return dueDate >= currentDate;
+  }
+
   onRadioChange(priority: string): void {
     this.selectedPriority = priority;
     console.log("Selected priority inside radio change method: "+this.selectedPriority);
@@ -110,14 +124,14 @@ export class ArchivedTaskListComponent implements OnInit {
   }
 
   onEditTask(task: Task) {
-    this.service.editTask(task).subscribe(
+    this.service.editArchivedTask(task).subscribe(
       (response) => {
-        console.log('Task added successfully:', response);
+        console.log('Task Updated successfully:', response);
         console.log(task);
         this.getTaskList();
       },
       (error) => {
-        console.error('Error adding task:', error);
+        console.error('Error updating task:', error);
       }
     );
   }
@@ -139,7 +153,7 @@ export class ArchivedTaskListComponent implements OnInit {
       return;
     }
 
-    this.service.deleteTask(task.taskId).subscribe(
+    this.service.deleteArchiveTask(task.taskId).subscribe(
       (response) => {
         console.log('Task deleted successfully:', response);
 

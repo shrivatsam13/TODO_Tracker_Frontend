@@ -30,11 +30,25 @@ export class TaskListService {
     return this.http.put(this.baseUrl + "user/updateTask", task, { headers });
   }
 
+  editArchivedTask(task: Task): Observable<any> {
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${this.token}`
+    });
+    return this.http.put(this.baseUrl + "user/updateArchivedTask", task, { headers });
+  }
+
   deleteTask(taskId: any): Observable<any> {
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${this.token}`
     });
     return this.http.delete(this.baseUrl + "user/task/" + taskId, { headers });
+  }
+
+  deleteArchiveTask(taskId: any): Observable<any> {
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${this.token}`
+    });
+    return this.http.delete(this.baseUrl + "user/archivedTaskList/" + taskId, { headers });
   }
 
   archieveTask(task: any): Observable<any> {
